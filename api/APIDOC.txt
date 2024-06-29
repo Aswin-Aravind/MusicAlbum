@@ -1,0 +1,217 @@
+1)api for fetching tokens
+
+  url:http://127.0.0.1:8000/api/token/
+
+  method: POST
+
+  body: {username,password}
+
+  authenticaton: nil
+
+
+
+=============================================================================================================
+
+
+schema: Album
+
+attributes: {title,year,director,language,is_active}
+
+
+
+2) api for listing all albums
+
+   url: http://127.0.0.1:8000/api/albums/
+
+   method: GET
+
+   body: nil
+
+   authenticaton: Token
+
+
+3) api for creating albums
+
+   url: http://127.0.0.1:8000/api/albums/
+
+   method: POST
+
+   body: {title,year,director,language}
+
+   authenticaton: Token
+
+
+4) api for album details
+
+   url: http://127.0.0.1:8000/api/albums/{id}
+
+   method: GET
+
+   body: nil
+
+   authenticaton: Token
+
+
+5) api for updating album
+
+   url: http://127.0.0.1:8000/api/albums/{id}
+
+   method: PUT
+
+   body: {title,year,director,language}
+
+   authenticaton: Token
+
+
+
+6) api for deleting album
+
+   url: http://127.0.0.1:8000/api/albums/{id}
+
+   method: DELETE
+
+   body: nil
+
+   authenticaton: Token
+
+
+==========================================END ALBUM========================================================
+
+
+schema: Track
+attributes: {title,singers,genre,duration,track_num,album}
+
+
+
+7) api for adding track 
+
+   url: http://127.0.0.1:8000/api/albums/{id}/add_track/
+
+   method: POST
+
+   body: {singers,genre,duration,track_num}
+
+   authenticaton: Token
+
+
+
+8) api for getting track details 
+
+   url: http://127.0.0.1:8000/api/tracks/{id}/
+
+   method: GET
+
+   body: nil
+
+   authenticaton: Token
+
+
+
+9) api for updating tracks 
+
+   url: http://127.0.0.1:8000/api/tracks/{id}/
+
+   method: PUT
+
+   body: {singers,genre,duration,track_num}
+
+   authenticaton: Token
+
+
+
+10) api for deleting tracks 
+
+   url: http://127.0.0.1:8000/api/tracks/{id}/
+
+   method: DELETE
+
+   body: nil
+
+   authenticaton: Token
+
+
+
+================================================END TRACK==================================================
+
+
+schema: User
+attributes:{username,password,email,first_name,last_name}
+
+
+
+11)api for user register
+
+   url: http://127.0.0.1:8000/api/userregister/
+
+   method: POST
+
+   body: {username,password,email,first_name,last_name}
+
+   authenticaton: nil
+
+
+======================================END USER=============================================================
+
+
+schema: Review
+attributes:{user,album,comments,rating}
+
+
+
+12)api for getting user review
+
+   url: http://127.0.0.1:8000/api/userreview/
+
+   method: GET
+
+   body: nil
+
+   authenticaton: Token
+
+
+
+13)api for adding user review
+
+   url: http://127.0.0.1:8000/api/userreview/{album_id}/add_review/
+
+   method: POST
+
+   body: {comments,rating}
+
+   authenticaton: Token
+
+
+
+14)api for getting review details
+
+   url: http://127.0.0.1:8000/api/userreview/{id}/
+
+   method: GET
+
+   body: nil
+
+   authenticaton: Token
+
+
+
+15)api for updating review details
+
+   url: http://127.0.0.1:8000/api/userreview/{id}/
+
+   method: PUT
+
+   body: {comments,rating}
+
+   authenticaton: Token
+
+
+
+16)api for deleting review details
+
+   url: http://127.0.0.1:8000/api/userreview/{id}/
+
+   method: DELETE
+
+   body: nil
+
+   authenticaton: Token
